@@ -1,9 +1,13 @@
 <html>
 <head>
-    <title>"Title"</title>
+    <title>Title</title>
     
 </head>
 <body>
+    <h2 id="pageTitle">This is the Title </h2>
+    <ul id="msg">
+        <li>This is my list message.</li>
+    </ul>
 <div>
     <input type="text" id="text1">
     <input type="text" id=text2>
@@ -13,9 +17,12 @@
 </body>
 <script>
         function myMessage(){
-    var message = "This is a message";
-    console.log(message);
-    alert(message);
+            var message = "This is a message";
+            console.log(message);
+            var newTitle = document.getElementById("text1").value;
+            document.title = newTitle;
+            document.getElementById("pageTitle").innerHTML = newTitle; //or:
+            pageTitle.innerHTML = newTitle;
         }
     </script>
 
