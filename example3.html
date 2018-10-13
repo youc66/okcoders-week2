@@ -10,20 +10,39 @@
     </ul>
 <div>
     <input type="text" id="text1">
-    <input type="text" id=text2>
+    <input type="text" id="color">
    <button onclick="myMessage()" id="button1">Click me</button>
    </div>
    
 </body>
 <script>
         function myMessage(){
-            var message = "This is a message";
-            console.log(message);
-            var newTitle = document.getElementById("text1").value;
-            document.title = newTitle;
-            document.getElementById("pageTitle").innerHTML = newTitle; //or:
-            pageTitle.innerHTML = newTitle;
-        }
+            var one = document.getElementById("text1");
+            var msg = document.getElementById("msg");
+            //var lii = document.getElementById("li");
+            var newListItem = one.value;
+            one.value = "";
+
+            var curList = msg.innerHTML;
+            msg.innerHTML =  curList + "<li>" + newListItem + "</li>";
+            if(color === 'crimson'){
+                document.title = "OSU";
+                color = "orange";
+            } else {
+                document.title = "GO OU";
+                color = 'crimson';
+            }
+            //lii.style = "background: " + color;
+            msg.style="background: " + color;
+}
+        //     document.getElementById("text1").value = "";
+        //     console.log(newListItem);
+        //     //document.title = newTitle;
+        //     var curList = document.getElementById("msg").innerHTML;
+        //     document.getElementById("msg").innerHTML = curList + "<li>" + newListItem + "</li>";
+        //    // document.li = newListItem;
+            
+        
     </script>
 
 </html>
