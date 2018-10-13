@@ -25,6 +25,7 @@
 
             var curList = msg.innerHTML;
             msg.innerHTML =  curList + "<li>" + newListItem + "</li>";
+            msg.innerHTML = curList + '<li style="background: ' + color '">' + newListItem + "</li>";
             if(color === 'crimson'){
                 document.title = "OSU";
                 color = "orange";
